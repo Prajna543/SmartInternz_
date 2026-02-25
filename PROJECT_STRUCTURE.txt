@@ -1,0 +1,115 @@
+Civil Engineering Insight Studio
+Project Structure & File Descriptions
+
+project/
+│
+├── 📄 app.py
+│   └── Main application file with Streamlit interface and AI logic
+│       • Loads Gemini AI model
+│       • Handles image uploads
+│       • Generates structure analysis
+│       • Displays results in web interface
+│
+├── 📄 requirements.txt
+│   └── Lists all Python packages needed
+│       • streamlit==1.31.0
+│       • google-generativeai==0.3.2
+│       • python-dotenv==1.0.0
+│       • Pillow==10.2.0
+│
+├── 🔐 .env
+│   └── Stores your Google API key (KEEP THIS SECRET!)
+│       • GOOGLE_API_KEY=your_api_key_here
+│       • Not committed to git (in .gitignore)
+│
+├── 📖 README.md
+│   └── Complete project documentation
+│       • Features overview
+│       • Installation instructions
+│       • Usage guide
+│       • Troubleshooting tips
+│
+├── 🚀 SETUP_GUIDE.md
+│   └── Detailed step-by-step setup instructions
+│       • How to get API key
+│       • Configuration steps
+│       • Common issues & solutions
+│
+├── 📋 QUICK_START.txt
+│   └── Quick reference guide (this file)
+│       • 5-minute setup checklist
+│       • Basic commands
+│
+├── ✅ verify_setup.py
+│   └── Setup verification script
+│       • Checks Python version
+│       • Verifies package installation
+│       • Validates API key configuration
+│
+├── 📝 PROJECT_STRUCTURE.txt
+│   └── This file - explains project organization
+│
+└── 🔒 .gitignore
+    └── Prevents sensitive files from being committed
+        • Includes .env to protect API key
+
+
+KEY FILES TO MODIFY:
+
+1. .env → Add your Google API key here
+2. app.py → (Already configured, no changes needed)
+
+
+FILES TO RUN:
+
+1. verify_setup.py → Check if everything is set up correctly
+2. app.py → Run the main application
+
+
+DEPENDENCIES (automatically installed):
+
+📦 streamlit
+   → Web application framework
+   → Creates the user interface
+
+📦 google-generativeai
+   → Google's AI SDK
+   → Powers the image analysis
+
+📦 python-dotenv
+   → Environment variable manager
+   → Securely loads API key
+
+📦 Pillow
+   → Image processing library
+   → Handles image uploads
+
+
+HOW FILES WORK TOGETHER:
+
+1. User runs: streamlit run app.py
+2. app.py loads API key from .env
+3. app.py creates web interface using Streamlit
+4. User uploads image through interface
+5. app.py sends image to Google Gemini AI
+6. AI analyzes structure and returns description
+7. app.py displays results to user
+
+
+IMPORTANT NOTES:
+
+⚠️  Never commit .env file to version control
+⚠️  Keep your API key private
+⚠️  Regularly check API usage limits
+⚠️  Use high-quality images for best results
+
+
+NEXT STEPS:
+
+1. ✅ Install dependencies: pip install -r requirements.txt
+2. ✅ Get API key from Google AI Studio
+3. ✅ Add API key to .env file
+4. ✅ Run verification: python verify_setup.py
+5. ✅ Start app: streamlit run app.py
+6. ✅ Open browser to http://localhost:8501
+7. ✅ Upload an image and analyze!
